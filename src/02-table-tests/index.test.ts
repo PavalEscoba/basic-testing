@@ -23,7 +23,6 @@ const testCases = [
 ];
 
 describe('simpleCalculator', () => {
-  // This test case is just to run this test suite, remove it when you write your own tests
   test.each(testCases)('simpleCalculator with $a and $b with action "$action" should return "$expected"', (testCase) => {
     expect(simpleCalculator(testCase)).toEqual(testCase.expected)
   })
