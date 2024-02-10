@@ -6,18 +6,18 @@ describe('simpleCalculator tests', () => {
     const addPayload = {
       a: 100,
       b: 200,
-      action: Action.Add
-    } 
+      action: Action.Add,
+    };
 
-    expect(simpleCalculator(addPayload)).toEqual(300)
+    expect(simpleCalculator(addPayload)).toEqual(300);
   });
 
   test('should subtract two numbers', () => {
     const subtractPayload = {
       a: 100,
       b: 51,
-      action: Action.Subtract
-    }
+      action: Action.Subtract,
+    };
 
     expect(simpleCalculator(subtractPayload)).toEqual(49);
   });
@@ -27,10 +27,10 @@ describe('simpleCalculator tests', () => {
     const multiplyPayload = {
       a: 100,
       b: 100,
-      action: Action.Multiply
-    }
+      action: Action.Multiply,
+    };
 
-    expect(simpleCalculator(multiplyPayload)).toEqual(10000)
+    expect(simpleCalculator(multiplyPayload)).toEqual(10000);
   });
 
   test('should divide two numbers', () => {
@@ -38,8 +38,8 @@ describe('simpleCalculator tests', () => {
     const dividePayload = {
       a: 100,
       b: 2,
-      action: Action.Divide
-    }
+      action: Action.Divide,
+    };
 
     expect(simpleCalculator(dividePayload)).toEqual(50);
   });
@@ -49,8 +49,8 @@ describe('simpleCalculator tests', () => {
     const exponentiatePayload = {
       a: 2,
       b: 5,
-      action: Action.Exponentiate
-    }
+      action: Action.Exponentiate,
+    };
 
     expect(simpleCalculator(exponentiatePayload)).toEqual(32);
   });
@@ -60,8 +60,8 @@ describe('simpleCalculator tests', () => {
     const invalidActionPayload = {
       a: 2,
       b: 5,
-      action: 'invalid action'
-    }
+      action: 'invalid action',
+    };
 
     expect(simpleCalculator(invalidActionPayload)).toBe(null);
   });
@@ -70,9 +70,9 @@ describe('simpleCalculator tests', () => {
     // Write your test here
     const invalidArgsPayload = {
       a: 2,
-      b: "3",
-      action: Action.Add
-    }
+      b: '3',
+      action: Action.Add,
+    };
 
     expect(simpleCalculator(invalidArgsPayload)).toBeNull();
   });
